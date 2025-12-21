@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Only Network You Need — Welcome</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="brand">
+        <div class="brand-mark">◎</div>
+        <div>
+          <p class="eyebrow">the only network you need</p>
+          <h1>Private-first, ephemeral social space.</h1>
+        </div>
+      </div>
+      <p class="hero-sub">Everything fades by default. Identity is optional. Circles and Moments keep things small and temporary.</p>
+    </header>
+
+    <section class="card auth-card">
+      <h2>Sign in</h2>
+      <p class="muted">No passwords. Pick how you want to show up today.</p>
+      <form class="stack" data-auth-form>
+        <label class="field">
+          <span>Display name (optional)</span>
+          <input type="text" name="tempName" placeholder="TempName" />
+        </label>
+        <label class="field">
+          <span>Identity mode</span>
+          <select name="identityMode">
+            <option value="anonymous">Anonymous</option>
+            <option value="temporary">Temporary display name</option>
+            <option value="real">Real name (circles only)</option>
+          </select>
+        </label>
+        <button class="primary" type="submit">Continue to network</button>
+      </form>
+      <p class="tiny muted">Your choices are saved locally and can be changed in Settings.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <a class="nav-item active" href="index.html">Home</a>
+    <a class="nav-item" href="create.html">Create</a>
+    <a class="nav-item" href="settings.html">Settings</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
