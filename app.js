@@ -91,6 +91,7 @@ function renderFeed() {
     postEl.className = "post";
     postEl.dataset.postId = post.id;
 
+    // All posts display as anonymous; no identity data is stored or rendered.
     postEl.innerHTML = `
       <div class="post-header">
         <span class="post-author">Anon</span>
