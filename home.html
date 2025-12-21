@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project SoftExit — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <nav class="side-nav" aria-label="Primary">
+      <a class="nav-icon active" href="home.html" aria-label="Home">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5l7 6V19a1 1 0 0 1-1 1h-4.5v-5h-3v5H6a1 1 0 0 1-1-1v-8.5l7-6Z"/></svg>
+      </a>
+      <button class="nav-icon" type="button" data-open-composer aria-label="Post">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a1 1 0 0 1 1 1v5h5a1 1 0 1 1 0 2h-5v5a1 1 0 1 1-2 0v-5H6a1 1 0 1 1 0-2h5V6a1 1 0 0 1 1-1Z"/></svg>
+      </button>
+      <a class="nav-icon" href="settings.html" aria-label="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm8 3.5c0-.5-.04-1-.12-1.47l2.05-1.6-2-3.46-2.43.98a7.96 7.96 0 0 0-2.55-1.47l-.37-2.58h-4l-.37 2.58a7.96 7.96 0 0 0-2.55 1.47l-2.43-.98-2 3.46 2.05 1.6c-.08.47-.12.97-.12 1.47 0 .5.04 1 .12 1.47l-2.05 1.6 2 3.46 2.43-.98c.74.63 1.6 1.14 2.55 1.47l.37 2.58h4l.37-2.58a7.96 7.96 0 0 0 2.55-1.47l2.43.98 2-3.46-2.05-1.6c.08-.47.12-.97.12-1.47Z"/></svg>
+      </a>
+    </nav>
+
+    <main class="page" aria-live="polite">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Live now</p>
+          <h1>Active feed</h1>
+        </div>
+      </header>
+
+      <section>
+        <div class="stack" data-feed></div>
+        <div class="empty-state" data-empty-feed hidden>
+          <div class="pulse"></div>
+          <p>Nothing live right now.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" data-modal hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Create post">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="document">
+      <header class="modal-header">
+        <h2>Create a post</h2>
+        <button class="icon-button" type="button" data-close-modal aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </header>
+      <form class="stack" data-composer>
+        <label class="field">
+          <span>Post type</span>
+          <select name="postType" data-post-type>
+            <option value="text" selected>Text</option>
+            <option value="image">Image</option>
+          </select>
+        </label>
+        <label class="field" data-text-field>
+          <span>Message</span>
+          <textarea rows="4" name="content" placeholder="Share a quiet update…" required></textarea>
+        </label>
+        <div class="field" data-image-field hidden>
+          <span>Image</span>
+          <input type="file" accept="image/*" data-image-input />
+          <div class="image-preview" data-image-preview hidden>
+            <img alt="Selected upload preview" />
+          </div>
+          <label class="inline-field">
+            <input type="checkbox" data-view-once />
+            <span>View once</span>
+          </label>
+        </div>
+        <label class="field">
+          <span>Expires in</span>
+          <select name="ttl" data-ttl-select>
+            <option value="3600">1 hour</option>
+            <option value="21600" selected>6 hours</option>
+            <option value="86400">24 hours</option>
+          </select>
+        </label>
+        <button class="primary" type="submit">Post</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

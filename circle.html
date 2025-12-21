@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Only Network You Need — Circle</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Circle</p>
+        <h1 data-circle-title>Circle</h1>
+      </div>
+      <div class="identity-chip" data-identity-summary></div>
+    </header>
+
+    <section class="card" data-circle-meta>
+      <p class="muted">Members</p>
+      <div class="chips" data-circle-members></div>
+    </section>
+
+    <section class="card composer" data-composer data-container-type="circle">
+      <div class="composer-header">
+        <span class="muted">Post to this circle</span>
+        <label class="inline-field">
+          <span class="muted">Expires in</span>
+          <select data-ttl-select>
+            <option value="3600">1 hour</option>
+            <option value="21600" selected>6 hours</option>
+            <option value="86400">24 hours</option>
+          </select>
+        </label>
+      </div>
+      <textarea rows="3" placeholder="Share with your circle…" data-composer-input></textarea>
+      <div class="composer-footer">
+        <button class="primary" data-composer-submit>Post</button>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Circle feed</h2>
+      <div class="stack" data-feed></div>
+      <div class="empty-state" data-empty-feed hidden>
+        <p>Nothing live right now.</p>
+        <a class="primary" href="create.html">Start a Moment</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <a class="nav-item" href="home.html">Home</a>
+    <a class="nav-item" href="create.html">Create</a>
+    <a class="nav-item" href="settings.html">Settings</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
