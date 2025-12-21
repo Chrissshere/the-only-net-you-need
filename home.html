@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Only Network You Need — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Your network, right now</p>
+        <h1>Live feed</h1>
+      </div>
+      <div class="identity-chip" data-identity-summary></div>
+    </header>
+
+    <section class="card composer" data-composer data-container-type="home">
+      <div class="composer-header">
+        <span class="muted">Post to your network</span>
+        <label class="inline-field">
+          <span class="muted">Expires in</span>
+          <select data-ttl-select>
+            <option value="3600">1 hour</option>
+            <option value="21600" selected>6 hours</option>
+            <option value="86400">24 hours</option>
+          </select>
+        </label>
+      </div>
+      <textarea rows="3" placeholder="Share a short, quiet update…" data-composer-input></textarea>
+      <div class="composer-footer">
+        <button class="primary" data-composer-submit>Post</button>
+      </div>
+    </section>
+
+    <section class="split-grid">
+      <div>
+        <h2 class="section-title">Active Moments</h2>
+        <div class="stack" data-moments-list></div>
+      </div>
+      <div>
+        <h2 class="section-title">Circles</h2>
+        <div class="stack" data-circles-list></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Live feed</h2>
+      <div class="stack" data-feed></div>
+      <div class="empty-state" data-empty-feed hidden>
+        <p>Nothing live right now.</p>
+        <a class="primary" href="create.html">Start a Moment</a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Primary">
+    <a class="nav-item active" href="home.html">Home</a>
+    <a class="nav-item" href="create.html">Create</a>
+    <a class="nav-item" href="settings.html">Settings</a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
